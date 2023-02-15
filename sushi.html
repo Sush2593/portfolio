@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+  <title>Webpage</title>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    .navbar-default a.navbar-brand {
+      color: #415e9b;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-default a.navbar-brand:hover {
+      color: #ffffff;
+    }
+
+    nav.navbar.top-nav {
+      background-color: #000c0f;
+      border-bottom: 1px solid #030f1d;
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    }
+
+    nav.navbar.top-nav #navbar ul.nav li a {
+      color: #ffffff;
+      font-size: 18px;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav.navbar.top-nav #navbar ul.nav li a:hover,
+    nav.navbar.top-nav #navbar ul.nav li a:focus {
+      color: #415e9b;
+    }
+
+    header#heading-block nav.navbar-default div.navbar-header button {
+      background-color: #0f376a;
+      border: none !important;
+    }
+
+    header#heading-block nav.navbar-default div.navbar-header button.collapsed {
+      background-color: #165195 !important;
+      border: none;
+    }
+
+    header#heading-block nav.navbar-default div.navbar-header button span.icon-bar {
+      background-color: #ffffff !important;
+    }
+
+    /* Home section starts */
+
+    #home-section {
+      background-image: url(https://i.pinimg.com/originals/6e/90/73/6e90731fef6431f6e9f7d1f7a4f4eb15.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      background-size: cover;
+      position: relative;
+      border-bottom: 2px solid rgb(3, 34, 48);
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    }
+
+    .section-wrap {
+      width: 100%;
+      background-color: rgba(52, 52, 54, 0.4);
+    }
+
+    .info-block {
+      padding: 200px 0 200px 0;
+      color: #ffffff;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    .info-block h1 {
+      font-size: 50px;
+    }
+
+    .info-bg {
+      background-color: rgb(22, 35, 79);
+      display: inline-block;
+      padding: 70px 100px 70px 100px;
+      border-radius: 50%;
+      border: 5px solid transparent;
+      border-color: #3189b2;
+    }
+
+    a.btn.btn-info-contact {
+      margin: 20px;
+      border-radius: 0;
+      font-size: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+      color: #ffffff;
+      padding-left: 22px;
+    }
+
+    a.btn.btn-info-contact i {
+      margin-left: 8px;
+    }
+
+    a.btn.btn-info-contact.btn-facebook {
+      border: 2px solid rgb(65, 94, 155);
+      background-color: rgba(65, 94, 155, 0.4);
+    }
+
+    a.btn.btn-info-contact.btn-facebook:hover {
+      background-color: rgba(65, 94, 155, 1);
+    }
+
+    a.btn.btn-info-contact.btn-git {
+      border: 2px solid rgb(43, 49, 101);
+      background-color: rgba(43, 49, 101, 0.4);
+    }
+
+    a.btn.btn-info-contact.btn-git:hover {
+      border: 2px solid rgb(43, 49, 101);
+      background-color: rgba(43, 49, 101, 1);
+    }
+
+    a.btn.btn-info-contact.btn-linkedIn {
+      border: 2px solid rgb(30, 32, 34);
+      background-color: rgba(30, 32, 34, 0.4);
+    }
+
+    a.btn.btn-info-contact.btn-linkedIn:hover {
+      background-color: rgba(30, 32, 34, 1);
+    }
+
+    a.btn.btn-info-contact.btn-camp {
+      border: 2px solid black;
+      background-color: black;
+    }
+
+    a.btn.btn-info-contact.btn-camp:hover {
+      background-color: rgba(0, 100, 0, 1);
+    }
+
+    /* end home section */
+
+    /* about me block */
+
+    #about-me {
+      background-color: black;
+      position: relative;
+      width: 100%;
+      border-bottom: 2px solid rgb(3, 34, 48);
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    }
+
+    #about-me .about-info {
+      padding: 20px 0 20px 0;
+      position: relative;
+    }
+
+    h2.head-text {
+      color: #ffffff;
+      display: inline-block;
+      position: relative;
+    }
+
+    h2.head-text:before {
+      position: absolute;
+      margin: auto;
+      z-index: 1;
+      content: "";
+      width: 75%;
+      height: 2px;
+      bottom: 0px;
+      left: 12.5%;
+      display: table;
+      box-sizing: border-box;
+    }
+
+    h2.about-section.head-text:before {
+      background: purple;
+    }
+
+    .my-picture-block {
+      display: inline-block;
+    }
+
+    .my-pic-content {
+      color: #ffffff;
+      font-size: 20px;
+      display: inline-block;
+    }
+
+    .my-pic-content span {
+      font-size: 17px;
+    }
+
+    .my-picture-block img {
+      border: 5px solid purple;
+    }
+
+    #about-me div.about-main-part {
+      margin-top: 20px;
+      background-color: #000c0f;
+      color: #000c0f;
+    }
+
+    #about-me div.about-text {
+      float: right;
+      background-color: #efeeec;
+      padding: 15px 15px 15px 15px;
+      position: relative;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+    }
+
+    #about-me .about-info div.about-text span.arrow-abs {
+      position: absolute;
+      left: -37px;
+      font-size: 120px;
+      color: #efeeec;
+      top: 17px;
+    }
+
+
+    .hi-all {
+      float: right;
+      font-size: 22px;
+      font-family: "Lobster", sans-serif;
+      color: #3189b2;
+    }
+
+    .hi-all {
+      text-align: center;
+      float: none;
+    }
+
+    /* End about Me  */
+
+    /* My skills */
+
+    #my-skills {
+      background-color:black;
+      position: relative;
+      width: 100%;
+      padding: 0 0 45px 0;
+      color: #ffffff;
+      border-bottom: 2px solid rgb(3, 34, 48);
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    }
+
+    h2.skills-section.head-text:before {
+      background: purple;
+    }
+
+    ul.skills-list {
+      margin-top: 20px;
+    }
+
+    ul.skills-list li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    ul.soft-list li {
+      margin-top: 20px;
+      display: inline-block;
+      float: left;
+      margin-right: 20px;
+    }
+
+    /* End skills section */
+
+    /* Portfolio section */
+
+    #portfolio {
+      background-color: rgba(208, 168, 80, 1);
+      position: relative;
+      width: 100%;
+      border-bottom: 2px solid rgb(3, 34, 48);
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    }
+
+    .portfolio-block {
+      padding-bottom: 25px;
+    }
+
+    h2.portfolio-section.head-text:before {
+      background: purple;
+      color: white;
+    }
+
+    .portfolio-item {
+      padding: 5px 5px 15px 5px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      font-family: "Open Sans", sans-serif;
+      margin-top: 20px;
+    }
+
+    .portfolio-item h2 {
+      color: purple;
+      font-size: 21px;
+    }
+
+    .portfolio-item p {
+      font-size: 15px;
+      color: #343436;
+      text-align: left;
+      padding: 0 5px;
+    }
+
+    h2.p-item1:before {
+      background: #f83ba3;
+      bottom: -4px;
+    }
+
+    .portfolio-item figure {
+      position: relative;
+    }
+
+    .portfolio-item figcaption {
+      position: absolute;
+      top: 35%;
+      left: 25%;
+      display: none;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+      background-color: rgba(52, 52, 54, 0.7);
+      padding: 10px 10px;
+    }
+
+    .portfolio-item img {
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+    }
+
+    .portfolio-item:hover img {
+      opacity: 0.6;
+    }
+
+    .portfolio-item:hover figcaption {
+      display: block;
+    }
+
+    h2.p-item2:before {
+      background: purple;
+      bottom: -4px;
+    }
+
+    h2.p-item3:before {
+      background: purple;
+      bottom: -4px;
+    }
+
+    h2.p-item4:before {
+      background: #0b1222;
+      bottom: -4px;
+    }
+
+    h2.p-item5:before {
+      background: #a56cbc;
+      bottom: -4px;
+    }
+
+    h2.p-item6:before {
+      background: #61411c;
+      bottom: -4px;
+    }
+
+    h2.p-item7:before {
+      background: #f7da64;
+      bottom: -4px;
+    }
+
+    .more-proj {
+      background-color: #fff;
+      padding: 3px 8px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .more-proj h3 {
+      font-family: "Lobster", sans-serif;
+      color: #1d1f20;
+    }
+
+    .more-proj span {
+      font-size: 32px;
+      color: #1d3a47;
+    }
+
+    .social-butts li {
+      display: inline-block;
+      margin-right: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* End of portfolio section */
+
+    /* Contacts section */
+
+    #contacts {
+      background-color: rgba(0, 14, 39, 1);
+      position: relative;
+      width: 100%;
+      border-bottom: 2px solid rgb(3, 34, 48);
+      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+      color: #ffffff;
+
+    }
+
+    #contacts h3 a {
+      text-decoration: none;
+    }
+
+    h2.contacts-section:before {
+      background: purple;
+    }
+
+    /* end contacts section */
+
+    /* footer */
+
+    footer {
+      background-color: rgb(0, 14, 39);
+      padding: 20px 0 20px 0;
+    }
+
+    ul.bottom-nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    ul.bottom-nav li a {
+      text-decoration: none;
+      font-size: 16px;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari */
+      transition: all 0.3s ease-in-out;
+    }
+
+    ul.bottom-nav li a:hover {
+      color: #ffffff;
+    }
+
+    /* media rules */
+  </style>
+</head>
+
+<body>
+  <!-- scripts and fonts -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+
+  <!-- Header nav block -->
+
+  <header id="heading-block">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top top-nav" style="height: 80px;">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="toggler" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse bg-dark navbar-dark fixed-top ">
+          <ul class="nav navbar-nav navbar-center">
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#my-skills">Skills</a></li>
+            <li><a href="#portfolio">Porfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- navbar block end -->
+
+  <!-- Start home section -->
+
+  <section id="home-section">
+    <div class="section-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center col-xs-12">
+            <div class="info-block">
+              <div class="info-bg">
+                <h1>👨‍💻</h1>
+                <h1
+                  style="background: linear-gradient(207deg,#a83385,#963810); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  SUSHEEL K</h1>
+              </div>
+              <div class="row" style="margin-top: 3rem;position: relative; left: -2rem;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End home section -->
+
+  <!-- About me section -->
+
+  <section id="about-me">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-12 text-center about-info">
+          <h2 class="about-section head-text">About me</h2>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-2 about-main-part">
+              <div class="col-md-4 my-picture-block">
+                <label class="my-pic-content">
+                  <img
+                    src="https://lh3.googleusercontent.com/pw/AMWts8BNzSzjw7mvWW5tCZGFGbfBRq32ocIlYoaGzuOGAuafdIWKFNWBTgZ7-JRes8ZC_SgyLctZHNgn_1hR5SxsvcqqLu7htFvyjhB-9BmN5oiX5C5Dist0DAROIrmFVJJqWaibkdCJtPfLVCq5ohp39vK5yQ=w584-h812-no?authuser=0"
+                    height="200px" width="200px">
+                  <br>
+                  SUSHEEL KERAKALAMATTI <br>
+                  <span><i>Student</i></span>
+                </label>
+              </div>
+              <div class="about-main-part">
+
+                <div class="col-md-7 about-text text-left" style="background-color: #000c0f; color:white">
+                  <span class="arrow-abs"></span>
+                  <p class="hi-all"></p>
+                  <With>I am Susheeek R Kerakalamatti and currently an computer science engineering
+                    student pursing my degree in this field. As a computer science engineering student, I have a strong
+                    foundation in computer programming and highly invested in mmy
+                    education anf future career. A well determined and a hardworking with a strong communicator and have
+                    a good working knowledge. In addition, I am highly organized and have a proven track record of being
+                    able to manage multiple tasks simultaneously. Never give up until I get to something
+                    right and would like to keep a positive attitude and enjoy facing challenges.Have the ability to
+                    cope up with pressure,deadlines and multitasking.Open to a variety and different challenges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End About me section -->
+
+  <!-- My Skills section -->
+
+  <section id="my-skills">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="skills-section head-text">Skills</h2>
+        </div>
+        <div class="col-md-12 text-center">
+          <h3>here are some of my skills :</h3>
+          <div class="row">
+            <ul class="skills-list">
+              <li><a href="#"><img class="img-responsive" src=""></a>
+                <p>HMTL 5</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>CSS 3</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>JavaScript</p>
+              </li>
+              <li><a href="#"><img class="img-responsive" src=""></a>
+                Bootstrap 5</li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+              <li><a href="#"><img class="img-responsive"></a>
+                <p>not yet added</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Contacts section -->
+
+  <!-- End contacts section -->
+  <!-- footer -->
+
+  <section id="contacts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center col-xs-12">
+          <h2 class="head-text contacts-section">Contact me</h2>
+          <h3>Let Us Get social:<br>
+            <a href="mailto: susheelkerakalamatti@gmail.com"> susheelkerakalamatti@gmail.com</a>
+          </h3>
+          <div class="row">
+            <ul class="list" id="socialmedia1" style="display: inline-flex; flex-direction: row; gap:4rem ">
+              <li id="shadow"><a href="https://github.com/Sush2593"><span id="boot-icon" class="bi bi-github"
+                    style="font-size: 3rem; background-clip: text; color: rgb(94, 48, 133); opacity: 1;"></span></a>
+              </li>
+              <li><a href="https://instagram.com/susheel_kerakalamatti?igshid=NTA5ZTk1NTc="><span
+                    class="bi bi-instagram"
+                    style="font-size: 3rem;color: hotpink; text-shadow: rgb(174, 78, 78) 2px 2px 2.6px;"></span></a>
+              </li>
+              <li id="shadow2"><a href="https://wa.me/+917899332593?text=hello%20_Susheel_"><span id="boot-icon"
+                    class="bi bi-whatsapp" style="font-size: 3rem; color: rgb(0, 128, 55);"></span></a>
+              </li>
+              <li id="shadow3"><a href="https://www.snapchat.com/add/sush_2593?share_id=hAoSwhs5qRs&locale=en-GB"><span
+                    id="boot-icon" class="bi bi-snapchat"
+                    style="font-size: 3rem; color: rgb(255, 210, 48); background-clip: text; "></span></a></li>
+              <li id="shadow6"><a href="https://www.facebook.com/profile.php?id=100073733137564&mibextid=ZbWKwL"><span
+                    id="boot-icon" class="bi bi-facebook"
+                    style="font-size: 3rem; color: blue; background-clip: text; "></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="bottom-nav">
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#my-skills">Skills</a></li>
+            <li><a href="#portfolio">Porfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
