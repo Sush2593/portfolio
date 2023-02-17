@@ -1,701 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
-  <title>Webpage</title>
-  <style>
-    body {
-      overflow-x: hidden;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            overflow-x: hidden;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .hero{
+            margin: 0;
+            background:url("https://i.pinimg.com/originals/6a/cf/fa/6acffa86219d86a596900aece4b4da1e.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+    nav{
+        /* background-color: #18122B; */
+        width: 100%;
+        height: 70px;
     }
-
-    li {
-      list-style: none;
+    nav h4{
+        color: white;
+        margin-left: 1350px;
+        
+        font-size: 30px;
+        position: absolute;
+        margin-top: 30px;
     }
-
-    a {
-      cursor: pointer;
+    nav ul{
+        display: flex;
+        gap: 80px;
+        padding: 10px 20px;
+        top: 30px;
+        position: absolute;
+        background-color: white;
+        margin-left: 230px;
+        color: black;
+        font-weight: bold;
+        list-style-type: none;
+        justify-content: end;
+        border-radius: 30px;
+        margin-right: 100px;
     }
-
-    .navbar-default a.navbar-brand {
-      color: #415e9b;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
+    nav ul li a{
+        text-decoration: none;
+        color: black;
     }
-
-    .navbar-default a.navbar-brand:hover {
-      color: #ffffff;
+    nav ul li a:hover{
+       
+        color: red;
+        transform: scale(1.1);
     }
-
-    nav.navbar.top-nav {
-      background-color: #000c0f;
-      border-bottom: 1px solid #030f1d;
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
+    .name{
+        color: white;
+        
     }
-
-    nav.navbar.top-nav #navbar ul.nav li a {
-      color: #ffffff;
-      font-size: 18px;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
+    .name_text{
+        width: 600px;
+        margin-top: 160px;
+        position: absolute;
+        margin-left: 130px;
+        border-radius: 30px 0px 30px 0px;
+        padding: 15px;
+        background-color: white;
     }
-
-    nav.navbar.top-nav #navbar ul.nav li a:hover,
-    nav.navbar.top-nav #navbar ul.nav li a:focus {
-      color: #415e9b;
+    .name_text h1{
+        font-size: 55px;
+        margin-bottom: 10px;
+        color:darkblue;
+        /* background-color: white; */
     }
-
-    header#heading-block nav.navbar-default div.navbar-header button {
-      background-color: #0f376a;
-      border: none !important;
+    .name_text h4{
+        font-size: 25px;
+        color: transparent;
+        color:darkblue;
     }
-
-    header#heading-block nav.navbar-default div.navbar-header button.collapsed {
-      background-color: #165195 !important;
-      border: none;
+    .name_text p{
+        text-align: justify;
+        font-weight: bold;
+        font-size: 16px;
+        color:darkblue;
     }
-
-    header#heading-block nav.navbar-default div.navbar-header button span.icon-bar {
-      background-color: #ffffff !important;
-    }
-
-    /* Home section starts */
-
-    #home-section {
-      background-image: url(https://i.pinimg.com/originals/6e/90/73/6e90731fef6431f6e9f7d1f7a4f4eb15.jpg);
-      background-repeat: no-repeat;
-      width: 100%;
-      background-size: cover;
-      position: relative;
-      border-bottom: 2px solid rgb(3, 34, 48);
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-    }
-
-    .section-wrap {
-      width: 100%;
-      background-color: rgba(52, 52, 54, 0.4);
-    }
-
-    .info-block {
-      padding: 200px 0 200px 0;
-      color: #ffffff;
-      font-family: "Roboto Condensed", sans-serif;
-    }
-
-    .info-block h1 {
-      font-size: 50px;
-    }
-
-    .info-bg {
-      background-color: rgb(22, 35, 79);
-      display: inline-block;
-      padding: 70px 100px 70px 100px;
-      border-radius: 50%;
-      border: 5px solid transparent;
-      border-color: #3189b2;
-    }
-
-    a.btn.btn-info-contact {
-      margin: 20px;
-      border-radius: 0;
-      font-size: 20px;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
-      color: #ffffff;
-      padding-left: 22px;
-    }
-
-    a.btn.btn-info-contact i {
-      margin-left: 8px;
-    }
-
-    a.btn.btn-info-contact.btn-facebook {
-      border: 2px solid rgb(65, 94, 155);
-      background-color: rgba(65, 94, 155, 0.4);
-    }
-
-    a.btn.btn-info-contact.btn-facebook:hover {
-      background-color: rgba(65, 94, 155, 1);
-    }
-
-    a.btn.btn-info-contact.btn-git {
-      border: 2px solid rgb(43, 49, 101);
-      background-color: rgba(43, 49, 101, 0.4);
-    }
-
-    a.btn.btn-info-contact.btn-git:hover {
-      border: 2px solid rgb(43, 49, 101);
-      background-color: rgba(43, 49, 101, 1);
-    }
-
-    a.btn.btn-info-contact.btn-linkedIn {
-      border: 2px solid rgb(30, 32, 34);
-      background-color: rgba(30, 32, 34, 0.4);
-    }
-
-    a.btn.btn-info-contact.btn-linkedIn:hover {
-      background-color: rgba(30, 32, 34, 1);
-    }
-
-    a.btn.btn-info-contact.btn-camp {
-      border: 2px solid black;
-      background-color: black;
-    }
-
-    a.btn.btn-info-contact.btn-camp:hover {
-      background-color: rgba(0, 100, 0, 1);
-    }
-
-    /* end home section */
-
-    /* about me block */
-
-    #about-me {
-      background-color: black;
-      position: relative;
-      width: 100%;
-      border-bottom: 2px solid rgb(3, 34, 48);
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-    }
-
-    #about-me .about-info {
-      padding: 20px 0 20px 0;
-      position: relative;
-    }
-
-    h2.head-text {
-      color: #ffffff;
-      display: inline-block;
-      position: relative;
-    }
-
-    h2.head-text:before {
+    .name_img{
+        width: 800px;
+      margin-left: 1000px;
       position: absolute;
-      margin: auto;
-      z-index: 1;
-      content: "";
-      width: 75%;
-      height: 2px;
-      bottom: 0px;
-      left: 12.5%;
-      display: table;
-      box-sizing: border-box;
+      margin-top: 100px;
+     
+      /* background-color: white; */
     }
-
-    h2.about-section.head-text:before {
-      background: purple;
+    .name_img img{
+        right: 100px;
+        padding: 10px;
+        border-radius: 30px;
+      background-color: white;
     }
-
-    .my-picture-block {
-      display: inline-block;
+    .arrow a{
+        color: white;
+        text-decoration: none;
+        font-size: 70px;
+        position: absolute;
+        margin-top: 500px;
+        margin-left: 730px;
+        font-weight: bold;
     }
-
-    .my-pic-content {
-      color: #ffffff;
-      font-size: 20px;
-      display: inline-block;
+    .Scroll{
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 580px;
+        margin-left: 665px;
     }
-
-    .my-pic-content span {
-      font-size: 17px;
+    .CR{
+        color: darkblue;
+        padding: 10px;
+        background-color: white;
+        display: inline-block;
+        border-radius: 0px 30px 0px 30px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-left: 1050px;
     }
-
-    .my-picture-block img {
-      border: 5px solid purple;
+    .about{
+        height: 100vh;
+        background: url("https://wallpapers.com/images/hd/feeling-alone-blue-starry-sky-jjvqexnl16adqzg0.jpg");
+        background-size: cover;
+        background-attachment: fixed;
     }
-
-    #about-me div.about-main-part {
-      margin-top: 20px;
-      background-color: #000c0f;
-      color: #000c0f;
+    .about h3{
+        color: white;
+        font-size: 45px;
+        margin-top: 60px;
+        margin-left: 60px;
     }
-
-    #about-me div.about-text {
-      float: right;
-      background-color: #efeeec;
-      padding: 15px 15px 15px 15px;
-      position: relative;
-      font-family: "Open Sans", sans-serif;
-      font-size: 15px;
+    .abt_text{
+        color: white;
+        width: 600px;
+        display: inline-block;
+        line-height: 30px;
+        text-align: justify;
+        color: darkblue;
+        background-color: white;
+        padding: 20px;
+        border-radius: 0px 30px 0px 30px;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 220px;
+        margin-left: 750px;
     }
-
-    #about-me .about-info div.about-text span.arrow-abs {
-      position: absolute;
-      left: -37px;
-      font-size: 120px;
-      color: #efeeec;
-      top: 17px;
+    .abt_img img{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 100px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 30px;
     }
-
-
-    .hi-all {
-      float: right;
-      font-size: 22px;
-      font-family: "Lobster", sans-serif;
-      color: #3189b2;
+    .skills{
+        height: 800px;
+        overflow: hidden;
+        background:url("https://www.hdwallpapers.in/download/black_dark_blue_art_hd_dark_blue-1920x1080.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        
     }
+     .skill_text{
+        height: 100px;
+     padding-top: 45px;
+        padding-left: 40px;
+        font-size: 30px;
+        font-weight: bold;
+     }
+     .first{
+        display: flex;
+     }
+     .skill_1{
+        width: 750px;
+        height: 150px;
+        overflow: hidden;
+        padding: 100px;
+        /* background-color: rebeccapurple; */
+     }
+     .skill_2{
+        width: 750px;
+        padding: 100px;
+        overflow: hidden;
+        height: 150px;
+        /* background-color: aqua; */
+     }
+     .second{
+        display: flex;
+        margin-bottom: 60px;
+     }
+     .skill_3{
+        width: 750px;
+        height: 150px;
+        overflow: hidden;
+        padding: 100px;
+        /* background-color: orange; */
+     }
+     .skill_4{
+        width: 750px;
+        height: 150px;
+        overflow: hidden;
+        padding: 100px;
+        /* background-color: green; */
+     }
+    .skills ul{
+        text-align: center;
+        font-size: 20px;
+        overflow: hidden;
+        color: black;
+        background-color: white;
+        padding: 20px 15px;
+        border-radius: 50%;
+        list-style-type: none;
+     }
+     .footer{
+        height: 300px;
+        overflow: hidden;
+        background:url("https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&w=1000&q=80");
+        background-size: cover;
+        /* background-attachment: fixed; */
+     }
+     .footer p{
+        color: white;
+        padding-top: 90px;
+        text-align: center;
+        overflow: hidden;
+        font-size: 18px;
+        margin-bottom: 20px;
+     }
+     .social{
+        color: white;
+        overflow: hidden;
+     }
+     .social ul{
+      height: 70px;
+        text-align: center;
+        padding: 30px;
+     }
+     .social li{
+        overflow: hidden;
+        cursor: pointer;
+        background-color: white;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 20px;
+        padding: 10px;
+     }
+     .social ul li a{
+        text-decoration: none;
+     }
+     .social ul li:hover{
+        background-color: #999999;
+        transform: scale(1.2);
+     }
+     
+    /* no connection*/
+    section .bubble.bubble1{
+            position: absolute;
+            width: 70px;
+            left: 103px;
+            opacity: 0.5;
+            height: 70px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0;
+            animation: round1 2s   infinite;
+        
+        }
+        section .bubble.bubble2{
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0;
+            animation: round2 2s   infinite;
+        }
+        section .bubble.bubble3{
+            position: absolute;
+            margin: 0;
+            width: 70px;
+            opacity: 0.8;
+            left: 50px;
+            top: 90px;
+            height: 70px;
+            background-color: white;
+            border-radius: 50%;
+            animation: round3 2s   infinite;
+            
+        }
 
-    .hi-all {
-      text-align: center;
-      float: none;
-    }
 
-    /* End about Me  */
+        @keyframes round1 {
+          0%{
+        left: 0px;
+        top: 0;
+      }
+      25%{
+        left: 70px;
+        top: 0px;
+      }
+      50%{
+        left: 35px;
+        top: 63px;
+      }
+      75%{
+        left: 0px;
+        top: 0px;
+      }
+      100%{
+        left: 0px;
+        top: 0px;
+      }
+        }
 
-    /* My skills */
 
-    #my-skills {
-      background-color:black;
-      position: relative;
-      width: 100%;
-      padding: 0 0 45px 0;
-      color: #ffffff;
-      border-bottom: 2px solid rgb(3, 34, 48);
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-    }
+        @keyframes round2 {
+          0%{
+        left: 73px;
+        top: 0;
+      }
+      25%{
+        left: 35px;
+        top: 63px;
+      }
+      50%{
+        left: 0px;
+        top: 0px;
+      }
+      75%{
+        left: 73px;
+        top: 0;
+      }
+      100%{
+        left: 73px;
+        top: 0;
+      }
+        }
 
-    h2.skills-section.head-text:before {
-      background: purple;
-    }
-
-    ul.skills-list {
-      margin-top: 20px;
-    }
-
-    ul.skills-list li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    ul.soft-list li {
-      margin-top: 20px;
-      display: inline-block;
-      float: left;
-      margin-right: 20px;
-    }
-
-    /* End skills section */
-
-    /* Portfolio section */
-
-    #portfolio {
-      background-color: rgba(208, 168, 80, 1);
-      position: relative;
-      width: 100%;
-      border-bottom: 2px solid rgb(3, 34, 48);
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-    }
-
-    .portfolio-block {
-      padding-bottom: 25px;
-    }
-
-    h2.portfolio-section.head-text:before {
-      background: purple;
-      color: white;
-    }
-
-    .portfolio-item {
-      padding: 5px 5px 15px 5px;
-      background-color: #ffffff;
-      border-radius: 5px;
-      font-family: "Open Sans", sans-serif;
-      margin-top: 20px;
-    }
-
-    .portfolio-item h2 {
-      color: purple;
-      font-size: 21px;
-    }
-
-    .portfolio-item p {
-      font-size: 15px;
-      color: #343436;
-      text-align: left;
-      padding: 0 5px;
-    }
-
-    h2.p-item1:before {
-      background: #f83ba3;
-      bottom: -4px;
-    }
-
-    .portfolio-item figure {
-      position: relative;
-    }
-
-    .portfolio-item figcaption {
-      position: absolute;
-      top: 35%;
-      left: 25%;
-      display: none;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
-      color: #fff;
-      background-color: rgba(52, 52, 54, 0.7);
-      padding: 10px 10px;
-    }
-
-    .portfolio-item img {
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
-    }
-
-    .portfolio-item:hover img {
-      opacity: 0.6;
-    }
-
-    .portfolio-item:hover figcaption {
-      display: block;
-    }
-
-    h2.p-item2:before {
-      background: purple;
-      bottom: -4px;
-    }
-
-    h2.p-item3:before {
-      background: purple;
-      bottom: -4px;
-    }
-
-    h2.p-item4:before {
-      background: #0b1222;
-      bottom: -4px;
-    }
-
-    h2.p-item5:before {
-      background: #a56cbc;
-      bottom: -4px;
-    }
-
-    h2.p-item6:before {
-      background: #61411c;
-      bottom: -4px;
-    }
-
-    h2.p-item7:before {
-      background: #f7da64;
-      bottom: -4px;
-    }
-
-    .more-proj {
-      background-color: #fff;
-      padding: 3px 8px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    .more-proj h3 {
-      font-family: "Lobster", sans-serif;
-      color: #1d1f20;
-    }
-
-    .more-proj span {
-      font-size: 32px;
-      color: #1d3a47;
-    }
-
-    .social-butts li {
-      display: inline-block;
-      margin-right: 20px;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
-    }
-
-    /* End of portfolio section */
-
-    /* Contacts section */
-
-    #contacts {
-      background-color: rgba(0, 14, 39, 1);
-      position: relative;
-      width: 100%;
-      border-bottom: 2px solid rgb(3, 34, 48);
-      -webkit-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      -moz-box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      box-shadow: 0px 1px 1px 0px rgba(65, 94, 155, 1);
-      color: #ffffff;
-
-    }
-
-    #contacts h3 a {
-      text-decoration: none;
-    }
-
-    h2.contacts-section:before {
-      background: purple;
-    }
-
-    /* end contacts section */
-
-    /* footer */
-
-    footer {
-      background-color: rgb(0, 14, 39);
-      padding: 20px 0 20px 0;
-    }
-
-    ul.bottom-nav li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    ul.bottom-nav li a {
-      text-decoration: none;
-      font-size: 16px;
-      -webkit-transition: all 0.3s ease-in-out;
-      /* Safari */
-      transition: all 0.3s ease-in-out;
-    }
-
-    ul.bottom-nav li a:hover {
-      color: #ffffff;
-    }
-
-    /* media rules */
-  </style>
+        @keyframes round3 {
+          0%{
+        left: 35px;
+        top: 63px;
+      }
+      25%{
+        left: 0px;
+        top: 0px;
+      }
+      50%{
+        left: 73px;
+        top: 0px;
+      }
+      75%{
+        left: 35px;
+        top: 63px;
+      }
+      100%{
+        left: 35px;
+        top: 63px;
+      }
+        }
+        .rotate-center {
+          width: 100px;
+          height: 100px;
+          background-color: white;
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
+}
+    </style>
 </head>
-
 <body>
-  <!-- scripts and fonts -->
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-    crossorigin="anonymous"></script>
-
-  <!-- Header nav block -->
-
-  <header id="heading-block">
-    <nav class="navbar navbar-expand-lg navbar-fixed-top top-nav" style="height: 80px;">
-      <div class="container">
-        <div class="navbar-header">
-          <button id="toggler" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-        </div>
-        <div id="navbar" class="navbar-collapse collapse bg-dark navbar-dark fixed-top ">
-          <ul class="nav navbar-nav navbar-center">
-            <li><a href="#home-section">Home</a></li>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#my-skills">Skills</a></li>
-            <li><a href="#portfolio">Porfolio</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
+    <section class="hero" id="tp">
+    <nav>
+        <div class="bubble bubble1"></div>
+        <div class="bubble bubble2"></div>
+         <div class="bubble bubble3"></div>
+        <h4>&#x2B26;<u> Portfolio</u></h4>
+        <ul>
+            <li><a href="">Home</a> </li>
+            <li><a href="#abt">About</a></li>
+            <li><a href="#ski">Skills</a></li>
+            <li><a href="#con">Contact</a></li>
+        </ul>
     </nav>
-  </header>
-
-  <!-- navbar block end -->
-
-  <!-- Start home section -->
-
-  <section id="home-section">
-    <div class="section-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center col-xs-12">
-            <div class="info-block">
-              <div class="info-bg">
-                <h1>👨‍💻</h1>
-                <h1
-                  style="background: linear-gradient(207deg,#a83385,#963810); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                  SUSHEEL K</h1>
-              </div>
-              <div class="row" style="margin-top: 3rem;position: relative; left: -2rem;">
-
-              </div>
-            </div>
-          </div>
+    <div class="name"> 
+        <div class="name_text">
+            <h4>Hi everyone</h4>
+            <h1>Im Susheel,</h1>
+            <p> currently an computer science engineering
+                student pursing my degree in this field. As a computer science engineering student, I have a strong
+                foundation in computer programming and highly invested in mmy
+                education anf future career.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End home section -->
-
-  <!-- About me section -->
-
-  <section id="about-me">
-    <div class="container">
-      <div class="row ">
-        <div class="col-md-12 text-center about-info">
-          <h2 class="about-section head-text">About me</h2>
-          <div class="row">
-            <div class="col-md-10 col-md-offset-2 about-main-part">
-              <div class="col-md-4 my-picture-block">
-                <label class="my-pic-content">
-                  <img
-                    src="https://lh3.googleusercontent.com/pw/AMWts8BNzSzjw7mvWW5tCZGFGbfBRq32ocIlYoaGzuOGAuafdIWKFNWBTgZ7-JRes8ZC_SgyLctZHNgn_1hR5SxsvcqqLu7htFvyjhB-9BmN5oiX5C5Dist0DAROIrmFVJJqWaibkdCJtPfLVCq5ohp39vK5yQ=w584-h812-no?authuser=0"
-                    height="200px" width="200px">
-                  <br>
-                  SUSHEEL KERAKALAMATTI <br>
-                  <span><i>Student</i></span>
-                </label>
-              </div>
-              <div class="about-main-part">
-
-                <div class="col-md-7 about-text text-left" style="background-color: #000c0f; color:white">
-                  <span class="arrow-abs"></span>
-                  <p class="hi-all"></p>
-                  <With>I am Susheeek R Kerakalamatti and currently an computer science engineering
-                    student pursing my degree in this field. As a computer science engineering student, I have a strong
-                    foundation in computer programming and highly invested in mmy
-                    education anf future career. A well determined and a hardworking with a strong communicator and have
-                    a good working knowledge. In addition, I am highly organized and have a proven track record of being
-                    able to manage multiple tasks simultaneously. Never give up until I get to something
-                    right and would like to keep a positive attitude and enjoy facing challenges.Have the ability to
-                    cope up with pressure,deadlines and multitasking.Open to a variety and different challenges.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="name_img">
+            <img src="https://lh3.googleusercontent.com/pw/AMWts8BNzSzjw7mvWW5tCZGFGbfBRq32ocIlYoaGzuOGAuafdIWKFNWBTgZ7-JRes8ZC_SgyLctZHNgn_1hR5SxsvcqqLu7htFvyjhB-9BmN5oiX5C5Dist0DAROIrmFVJJqWaibkdCJtPfLVCq5ohp39vK5yQ=w584-h812-no?authuser=0" alt="" width="300px" height="auto">
         </div>
-      </div>
+       
     </div>
-  </section>
+    <div class="arrow"><a href="#abt">&#x25BD;</a></div>
+    <div class="Scroll">Click arrow to scroll</div>
+    <div class="CR"> CR of 3 C division</div>
+</section>
 
-  <!-- End About me section -->
-
-  <!-- My Skills section -->
-
-  <section id="my-skills">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="skills-section head-text">Skills</h2>
-        </div>
-        <div class="col-md-12 text-center">
-          <h3>here are some of my skills :</h3>
-          <div class="row">
-            <ul class="skills-list">
-              <li><a href="#"><img class="img-responsive" src=""></a>
-                <p>HMTL 5</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>CSS 3</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>JavaScript</p>
-              </li>
-              <li><a href="#"><img class="img-responsive" src=""></a>
-                Bootstrap 5</li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-              <li><a href="#"><img class="img-responsive"></a>
-                <p>not yet added</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<!--About section-->
+<section class="about" id="abt">
+    <h3><u> About me</u> :</h3>
+    <div class="abt_img">
+        <img src="http://drive.google.com/uc?export=view&id=154DLIJVM-cbdrmf13yc1vP2tKKUUdeag" alt="" width="450px" height="auto">
     </div>
+    <div class="abt_text">
+        A well determined and a hardworking with a strong communicator and have
+        a good working knowledge. In addition, I am highly organized and have a proven track record of being
+        able to manage multiple tasks simultaneously. Never give up until I get to something
+        right and would like to keep a positive attitude and enjoy facing challenges.Have the ability to
+        cope up with pressure,deadlines and multitasking.Open to a variety and different challenges.
     </div>
-  </section>
-  <!-- Contacts section -->
-
-  <!-- End contacts section -->
-  <!-- footer -->
-
-  <section id="contacts">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center col-xs-12">
-          <h2 class="head-text contacts-section">Contact me</h2>
-          <h3>Let Us Get social:<br>
-            <a href="mailto: susheelkerakalamatti@gmail.com"> susheelkerakalamatti@gmail.com</a>
-          </h3>
-          <div class="row">
-            <ul class="list" id="socialmedia1" style="display: inline-flex; flex-direction: row; gap:4rem ">
-              <li id="shadow"><a href="https://github.com/Sush2593"><span id="boot-icon" class="bi bi-github"
-                    style="font-size: 3rem; background-clip: text; color: rgb(94, 48, 133); opacity: 1;"></span></a>
-              </li>
-              <li><a href="https://instagram.com/susheel_kerakalamatti?igshid=NTA5ZTk1NTc="><span
-                    class="bi bi-instagram"
-                    style="font-size: 3rem;color: hotpink; text-shadow: rgb(174, 78, 78) 2px 2px 2.6px;"></span></a>
-              </li>
-              <li id="shadow2"><a href="https://wa.me/+917899332593?text=hello%20_Susheel_"><span id="boot-icon"
-                    class="bi bi-whatsapp" style="font-size: 3rem; color: rgb(0, 128, 55);"></span></a>
-              </li>
-              <li id="shadow3"><a href="https://www.snapchat.com/add/sush_2593?share_id=hAoSwhs5qRs&locale=en-GB"><span
-                    id="boot-icon" class="bi bi-snapchat"
-                    style="font-size: 3rem; color: rgb(255, 210, 48); background-clip: text; "></span></a></li>
-              <li id="shadow6"><a href="https://www.facebook.com/profile.php?id=100073733137564&mibextid=ZbWKwL"><span
-                    id="boot-icon" class="bi bi-facebook"
-                    style="font-size: 3rem; color: blue; background-clip: text; "></span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <ul class="bottom-nav">
-            <li><a href="#home-section">Home</a></li>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#my-skills">Skills</a></li>
-            <li><a href="#portfolio">Porfolio</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    
+</section>
+<!-- SKills-->
+<div class="skills" id="ski">
+  <div class="skill_text">
+      <p style="color: white;">SKILLS :</p>
+  </div>
+  <div class="first">
+  <div class="skill_1">
+      <h4 style="font-size: 35px;text-align: center;margin-bottom: 20px;font-weight: bold;color: white;">Java</h4>
+      <ul>
+          <li>Inheritance</li>
+          <li>Polymorphism</li>
+          <li>Dynamic exexution</li>
+      </ul>
+  </div>
+  <div class="skill_2">
+      <h4 style="font-size: 35px;text-align: center;margin-bottom: 20px;font-weight: bold;color: white;">C Language</h4>
+      <ul>
+          <li>Pointer</li>
+              <li>Arrays and character array</li>
+              <li>Data structure and algorithm</li>
+      </ul>
+  </div>
+</div>
+<div class="second">
+  <div class="skill_3">
+      <h4 style="font-size: 35px;text-align: center;margin-bottom: 20px;font-weight: bold;color: white;">HTML & CSS</h4>
+      <ul>
+          <li>Front End Developing</li>
+          <li>JavaScript</li>
+          <li>Back End Developing</li>
+      </ul>
+  </div>
+  <div class="skill_4">
+      <h4 style="font-size: 35px;text-align: center;margin-bottom: 20px;font-weight: bold;color: white;">Powerpoint</h4>
+      <ul>
+          <li>Animation and transition</li>
+          <li>Template building</li>
+          <li>presentation</li>
+      </ul>
+  </div>
+</div>
+</div>
+<!--sfooter-->
+<div class="footer" id="con">
+  <p>I am willing to work and do my best for the organisation. DO contact me.</p>
+  <div class="social">
+  <ul>
+      <li><a href=""><img src="https://img.icons8.com/ios-glyphs/256/linkedin.png" alt="" width="17px" height="17px"></a></li>
+      <li><a href=""><img src="https://img.icons8.com/ios-glyphs/256/github.png" alt="" width="17px" height="17px"></a></li>
+      <li><a href=""><img src="https://img.icons8.com/ios-glyphs/256/gmail.png" alt="" width="17px" height="17px"></a></li>
+  </ul>
+  </div>
+  <!-- <p style="background-color: rgba(12, 12, 12, 0.7);height: 400px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam minus alias atque officia accusantium, maiores quam nesciunt ratione? Recusandae, aliquam? Unde est, iste eaque praesentium cumque dolor obcaecati vitae nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident placeat temporibus quaerat expedita soluta adipisci et aut cumque nobis culpa, labore neque reiciendis repellendus incidunt voluptates nesciunt laudantium ut?</p> -->
+  <a href="#tp" style="color:darkblue;text-decoration: none;font-size: 20px;text-align: center;margin-left: 700px;font-weight: bold;padding: 10px 20px;background-color: white;border-radius: 30px;">Top</a>
+</div>
 </body>
-
 </html>
